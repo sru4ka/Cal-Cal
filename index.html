@@ -82,51 +82,9 @@
   /* ---------- phone mockup ---------- */
   .phone-scene{display:flex;justify-content:center;perspective:1200px}
   .phone{width:320px;background:#0d0f0e;border-radius:52px;padding:12px;box-shadow:0 30px 80px rgba(10,40,25,.28),0 4px 16px rgba(0,0,0,.18);transform:rotate(2.5deg)}
-  .screen{background:var(--bg);border-radius:42px;overflow:hidden;position:relative;padding:14px 14px 0;height:640px}
+  .screen{background:var(--bg);border-radius:42px;overflow:hidden;position:relative;height:640px}
   .notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:104px;height:28px;background:#0d0f0e;border-radius:16px;z-index:5}
-  .scr-head{display:flex;align-items:center;justify-content:space-between;margin:46px 2px 12px}
-  .scr-head .hi{font-size:17px;font-weight:700}
-  .scr-head .hi small{display:block;font-size:11px;font-weight:500;color:var(--ink-2)}
-  .flame{display:flex;align-items:center;gap:5px;background:#fff;border:1px solid var(--hairline);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:700}
-  .days{display:flex;gap:6px;margin-bottom:12px}
-  .day{flex:1;text-align:center;font-size:10px;font-weight:600;color:var(--ink-2);background:#fff;border:1px solid var(--hairline);border-radius:12px;padding:7px 0}
-  .day b{display:block;font-size:13px;color:var(--ink)}
-  .day.on{background:var(--accent);border-color:var(--accent);color:rgba(255,255,255,.85)}
-  .day.on b{color:#fff}
-  .cardm{background:#fff;border:1px solid var(--hairline);border-radius:22px;box-shadow:0 4px 14px rgba(0,0,0,.04)}
-  .cal-card{display:flex;align-items:center;gap:16px;padding:16px}
-  .ring-wrap{position:relative;width:112px;height:112px;flex:none}
-  .ring-wrap svg{transform:rotate(-90deg)}
-  .ring-track{fill:none;stroke:#EEF1F0;stroke-width:11}
-  .ring-fill{fill:none;stroke:var(--accent);stroke-width:11;stroke-linecap:round;stroke-dasharray:308;stroke-dashoffset:308;transition:stroke-dashoffset 1.4s cubic-bezier(.22,.9,.35,1)}
-  .ring-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-  .ring-label b{font-size:24px;letter-spacing:-.02em}
-  .ring-label span{font-size:10px;color:var(--ink-2);font-weight:600}
-  .cal-side{flex:1}
-  .cal-side .row{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-2);font-weight:600;padding:5px 0;border-bottom:1px dashed var(--hairline)}
-  .cal-side .row:last-child{border-bottom:0}
-  .cal-side .row b{color:var(--ink);font-weight:700}
-  .macros{display:flex;gap:10px;margin-top:10px}
-  .macro{flex:1;padding:12px 8px;text-align:center}
-  .mring{position:relative;width:58px;height:58px;margin:0 auto 6px}
-  .mring svg{transform:rotate(-90deg)}
-  .mtrack{fill:none;stroke:#EEF1F0;stroke-width:7}
-  .mfill{fill:none;stroke-width:7;stroke-linecap:round;stroke-dasharray:151;stroke-dashoffset:151;transition:stroke-dashoffset 1.2s cubic-bezier(.22,.9,.35,1)}
-  .mfill.p{stroke:var(--protein)} .mfill.c{stroke:var(--carbs)} .mfill.f{stroke:var(--fat)}
-  .mring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
-  .macro span{font-size:10px;font-weight:600;color:var(--ink-2)}
-  .food{margin-top:10px;padding:6px 14px}
-  .food-row{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px solid #F0F2F3}
-  .food-row:last-child{border-bottom:0}
-  .food-emoji{width:36px;height:36px;border-radius:11px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
-  .food-name{font-size:12.5px;font-weight:700}
-  .food-name small{display:block;font-size:10px;font-weight:500;color:var(--ink-2)}
-  .food-kcal{margin-left:auto;font-size:12px;font-weight:700;color:var(--ink-2)}
-  .tabbar{position:absolute;left:0;right:0;bottom:0;height:66px;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--hairline);display:flex;align-items:center;justify-content:space-around;padding-bottom:8px}
-  .tab{font-size:9px;font-weight:600;color:var(--ink-2);text-align:center}
-  .tab.on{color:var(--accent-dark)}
-  .tab svg{width:22px;height:22px;margin:0 auto 2px}
-  .plus{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;font-weight:400;box-shadow:0 8px 20px rgba(25,204,107,.45);margin-top:-26px}
+  .scr-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
   .scan-chip{position:absolute;top:196px;right:-26px;background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(0,0,0,.14);padding:10px 14px;display:flex;gap:10px;align-items:center;transform:rotate(-2.5deg);animation:float 5s ease-in-out infinite}
   .scan-chip .ico{width:34px;height:34px;border-radius:10px;background:rgba(25,204,107,.14);display:flex;align-items:center;justify-content:center;font-size:17px}
   .scan-chip b{font-size:12.5px;display:block}
@@ -269,59 +227,8 @@
       <div style="position:relative">
         <div class="phone" aria-hidden="true">
           <div class="screen">
+            <video class="scr-video" src="img/demo.mp4" poster="img/demo-poster.jpg" autoplay muted loop playsinline></video>
             <div class="notch"></div>
-            <div class="scr-head">
-              <div class="hi">Good morning 👋<small>Sunday, July 6</small></div>
-              <div class="flame"><img src="img/flame.png" alt="" width="16" height="16" style="width:16px;height:16px"> 12</div>
-            </div>
-            <div class="days">
-              <div class="day">We<b>2</b></div><div class="day">Th<b>3</b></div><div class="day">Fr<b>4</b></div><div class="day">Sa<b>5</b></div><div class="day on">Su<b>6</b></div>
-            </div>
-            <div class="cardm cal-card">
-              <div class="ring-wrap">
-                <svg width="112" height="112" viewBox="0 0 112 112">
-                  <circle class="ring-track" cx="56" cy="56" r="49"/>
-                  <circle class="ring-fill" id="calRing" cx="56" cy="56" r="49"/>
-                </svg>
-                <div class="ring-label"><b>1,284</b><span>KCAL LEFT</span></div>
-              </div>
-              <div class="cal-side">
-                <div class="row">Goal <b>2,150</b></div>
-                <div class="row">Food <b>866</b></div>
-                <div class="row">Exercise <b>+180</b></div>
-              </div>
-            </div>
-            <div class="cardm macros">
-              <div class="macro">
-                <div class="mring"><svg width="58" height="58" viewBox="0 0 58 58"><circle class="mtrack" cx="29" cy="29" r="24"/><circle class="mfill p" data-fill="62" cx="29" cy="29" r="24"/></svg><b>82g</b></div>
-                <span>Protein</span>
-              </div>
-              <div class="macro">
-                <div class="mring"><svg width="58" height="58" viewBox="0 0 58 58"><circle class="mtrack" cx="29" cy="29" r="24"/><circle class="mfill c" data-fill="41" cx="29" cy="29" r="24"/></svg><b>118g</b></div>
-                <span>Carbs</span>
-              </div>
-              <div class="macro">
-                <div class="mring"><svg width="58" height="58" viewBox="0 0 58 58"><circle class="mtrack" cx="29" cy="29" r="24"/><circle class="mfill f" data-fill="55" cx="29" cy="29" r="24"/></svg><b>34g</b></div>
-                <span>Fat</span>
-              </div>
-            </div>
-            <div class="cardm food">
-              <div class="food-row">
-                <div class="food-emoji">🥑</div>
-                <div class="food-name">Avocado toast<small>Breakfast · 8:12 AM</small></div>
-                <div class="food-kcal">354 kcal</div>
-              </div>
-              <div class="food-row">
-                <div class="food-emoji">🍣</div>
-                <div class="food-name">Salmon poke bowl<small>Lunch · 12:40 PM</small></div>
-                <div class="food-kcal">512 kcal</div>
-              </div>
-            </div>
-            <div class="tabbar">
-              <div class="tab on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg>Home</div>
-              <div class="plus">+</div>
-              <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Progress</div>
-            </div>
           </div>
         </div>
         <div class="scan-chip">
@@ -564,20 +471,6 @@
   },{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Animate the phone rings when the hero phone becomes visible
-  const ringIO = new IntersectionObserver((entries)=>{
-    for (const e of entries) if (e.isIntersecting){
-      const cal = document.getElementById('calRing');
-      if (cal) cal.style.strokeDashoffset = 308*(1-0.40); // 40% consumed
-      document.querySelectorAll('.mfill').forEach(m=>{
-        const pct = parseInt(m.dataset.fill||'50',10)/100;
-        m.style.strokeDashoffset = 151*(1-pct);
-      });
-      ringIO.disconnect();
-    }
-  },{threshold:.35});
-  const phone = document.querySelector('.phone');
-  if (phone) ringIO.observe(phone);
 </script>
 </body>
 </html>

@@ -17,9 +17,12 @@ img/           Web-sized brand art (logo, favicon, mascots, OG image),
                generated from the originals in NewApp/art
 ```
 
-To publish the demo video: add the file as `img/demo.mp4`, then
-uncomment the "VIDEO" section in `index.html` (keep it under ~20 MB —
-GitHub Pages won't serve files over 100 MB and big videos load slowly).
+The hero phone plays `img/demo.mp4` (the app screen recording from
+NewApp/art, compressed from 18 MB to ~1.2 MB, status bar cropped).
+To replace it, re-run a similar ffmpeg pass on the new recording:
+`ffmpeg -i in.mp4 -vf "crop=1080:2228:0:160,scale=720:-2,fps=30"
+-c:v libx264 -crf 26 -movflags +faststart -an img/demo.mp4`
+and regenerate `img/demo-poster.jpg` from its first frame.
 
 Everything is dependency-free static HTML/CSS with a little vanilla JS —
 no build step, no framework, no external requests. The design uses the
