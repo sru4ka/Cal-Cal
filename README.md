@@ -13,7 +13,13 @@ privacy.html   Privacy policy (required for App Store review)
 terms.html     Terms of use (required for subscription apps)
 legal.css      Shared styles for the support/privacy/terms pages
 CNAME          Custom domain for GitHub Pages (calcalpro.com)
+img/           Web-sized brand art (logo, favicon, mascots, OG image),
+               generated from the originals in NewApp/art
 ```
+
+To publish the demo video: add the file as `img/demo.mp4`, then
+uncomment the "VIDEO" section in `index.html` (keep it under ~20 MB —
+GitHub Pages won't serve files over 100 MB and big videos load slowly).
 
 Everything is dependency-free static HTML/CSS with a little vanilla JS —
 no build step, no framework, no external requests. The design uses the
@@ -42,7 +48,7 @@ python3 -m http.server 8000
 
 - Replace the two `href="#pricing"` App Store badge links in `index.html`
   with the real App Store URL once the app is live.
-- Set up the `support@calcalpro.com` mailbox (or change the address in
+- Contact address on the site is dbromberg1@gmail.com (in
   `support.html`, `privacy.html`, `terms.html`).
 - Have a lawyer look over `privacy.html` / `terms.html` — they're a solid
   starting point, not legal advice.

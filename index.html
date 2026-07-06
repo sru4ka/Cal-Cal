@@ -10,9 +10,12 @@
 <meta property="og:description" content="The AI calorie & macro tracker. Point your camera at any meal and get calories and macros in seconds.">
 <meta property="og:url" content="https://calcalpro.com/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://calcalpro.com/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://calcalpro.com/img/og.png">
 <meta name="theme-color" content="#19CC6B">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='none' stroke='%2319CC6B' stroke-width='14' stroke-linecap='round' stroke-dasharray='198 66' transform='rotate(-90 50 50)'/%3E%3Ccircle cx='50' cy='50' r='14' fill='%2319CC6B'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <style>
   :root{
     --accent:#19CC6B; --accent-dark:#0D9E52;
@@ -41,7 +44,7 @@
   header{position:sticky;top:0;z-index:50;background:rgba(245,245,247,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(0,0,0,.05)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
-  .logo svg{width:30px;height:30px}
+  .logo img{width:34px;height:34px;border-radius:9px}
   .nav-links{display:flex;gap:30px;font-size:15px;font-weight:500;color:var(--ink-2)}
   .nav-links a:hover{color:var(--ink)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;border-radius:16px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;border:0}
@@ -162,7 +165,10 @@
   .coach h2{color:#fff}
   .coach .sub{color:#9BA8A1}
   .coach .kicker{background:rgba(25,204,107,.16);color:var(--accent)}
-  .chat{display:flex;flex-direction:column;gap:12px}
+  .chat-scene{display:flex;align-items:flex-end;gap:0}
+  .chat-scene .mascot{width:150px;flex:none;margin-right:-26px;margin-bottom:-14px;z-index:2;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+  .chat{display:flex;flex-direction:column;gap:12px;flex:1}
+  @media(max-width:520px){.chat-scene .mascot{width:104px;margin-right:-18px}}
   .bubble{max-width:92%;padding:14px 18px;border-radius:20px;font-size:14.5px;line-height:1.5}
   .bubble.ai{background:#1C2620;border:1px solid #27332C;border-bottom-left-radius:6px;color:#E7EFEA}
   .bubble.ai b{color:var(--accent)}
@@ -228,7 +234,7 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Cal Cal home">
-      <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="#19CC6B" stroke-width="14" stroke-linecap="round" stroke-dasharray="198 66" transform="rotate(-90 50 50)"/><circle cx="50" cy="50" r="14" fill="#19CC6B"/></svg>
+      <img src="img/logo.png" alt="" width="34" height="34">
       Cal Cal
     </a>
     <nav class="nav-links" aria-label="Main">
@@ -266,7 +272,7 @@
             <div class="notch"></div>
             <div class="scr-head">
               <div class="hi">Good morning 👋<small>Sunday, July 6</small></div>
-              <div class="flame">🔥 12</div>
+              <div class="flame"><img src="img/flame.png" alt="" width="16" height="16" style="width:16px;height:16px"> 12</div>
             </div>
             <div class="days">
               <div class="day">We<b>2</b></div><div class="day">Th<b>3</b></div><div class="day">Fr<b>4</b></div><div class="day">Sa<b>5</b></div><div class="day on">Su<b>6</b></div>
@@ -319,7 +325,7 @@
           </div>
         </div>
         <div class="scan-chip">
-          <div class="ico">📸</div>
+          <div class="ico"><img src="img/favicon.png" alt="" width="26" height="26" style="width:26px;height:26px;border-radius:7px"></div>
           <div><b>Meal identified</b><small>Poke bowl · 512 kcal</small></div>
         </div>
       </div>
@@ -337,6 +343,18 @@
     <div class="pill"><span>🧠</span> Built-in AI coach</div>
   </div>
 </div>
+
+<!-- ================= VIDEO (uncomment when the demo video is uploaded to img/demo.mp4) =================
+<section id="video" style="padding-bottom:0">
+  <div class="wrap center">
+    <span class="kicker">See it in action</span>
+    <h2>Watch a meal get logged in seconds</h2>
+    <video controls playsinline preload="metadata" style="width:100%;max-width:860px;border-radius:24px;box-shadow:var(--shadow);margin-top:44px;border:1px solid var(--hairline)">
+      <source src="img/demo.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+-->
 
 <!-- ================= HOW ================= -->
 <section id="how">
@@ -399,11 +417,14 @@
             <div class="coach-li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#19CC6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Works instantly, on-device — no waiting, no connection needed</div>
           </div>
         </div>
-        <div class="chat" aria-hidden="true">
+        <div class="chat-scene" aria-hidden="true">
+        <img class="mascot" src="img/coach.png" alt="">
+        <div class="chat">
           <div class="bubble me">What should I have for dinner?</div>
           <div class="bubble ai">You've got <b>1,284 kcal</b> left and you're <b>68g short on protein</b>. A grilled chicken burrito bowl or salmon with rice would land you right on target. 🎯</div>
           <div class="bubble me">And if I want dessert too?</div>
           <div class="bubble ai">Keep dinner around 900 kcal — go lighter on the rice — and you've got room for frozen yogurt after. Deal? 🍦</div>
+        </div>
         </div>
       </div>
     </div>
@@ -499,6 +520,7 @@
 <section style="padding-top:0">
   <div class="wrap">
     <div class="final reveal">
+      <img src="img/mascot-heart.png" alt="" style="width:150px;margin:0 auto 22px;position:relative;filter:drop-shadow(0 14px 28px rgba(0,0,0,.25))">
       <h2>Your next meal is a data point.<br>Start counting the easy way.</h2>
       <p>Download Cal Cal, snap your first meal, and get your personalized plan in under two minutes.</p>
       <a class="store-badge" href="#pricing" aria-label="Download on the App Store">
@@ -514,7 +536,7 @@
     <div class="foot">
       <div>
         <a class="logo" href="#top">
-          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="42" fill="none" stroke="#19CC6B" stroke-width="14" stroke-linecap="round" stroke-dasharray="198 66" transform="rotate(-90 50 50)"/><circle cx="50" cy="50" r="14" fill="#19CC6B"/></svg>
+          <img src="img/logo.png" alt="" width="34" height="34">
           Cal Cal
         </a>
         <p style="margin-top:10px;max-width:300px">The AI calorie &amp; macro tracker.<br>Snap a photo, know your numbers.</p>

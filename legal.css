@@ -13,7 +13,7 @@ header{position:sticky;top:0;background:rgba(245,245,247,.85);backdrop-filter:bl
 .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--ink);letter-spacing:-.02em}
 .logo:hover{text-decoration:none}
-.logo svg{width:30px;height:30px}
+.logo img{width:34px;height:34px;border-radius:9px}
 .back{font-size:14.5px}
 main{padding:64px 0 96px}
 h1{font-size:clamp(30px,5vw,40px);letter-spacing:-.02em;line-height:1.15;margin-bottom:8px}
