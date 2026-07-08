@@ -102,10 +102,20 @@ ${APPHEAD}
   </svg>
 </div>
 <div class="card">
-  <div class="h">Daily Average Calories</div>
-  <div class="row" style="margin-top:6px">
-    <div class="big" style="font-size:34px">3,180 <span style="font-size:16px;color:#858C8A;font-weight:600">cals</span></div>
-    <div style="color:#0D9E52;font-weight:800;font-size:14px">on plan ✓</div>
+  <div class="row"><div class="h">Your Transformation</div>
+  <div style="background:rgba(25,204,107,.12);color:#0D9E52;font-weight:800;font-size:12.5px;padding:6px 11px;border-radius:999px">▼ 15.4 lb so far</div></div>
+  <div style="display:flex;gap:10px;margin-top:12px">
+    <div style="flex:1;background:linear-gradient(180deg,#F3F6F4,#E9EFEA);border-radius:18px;padding:12px 8px;text-align:center">
+      <svg viewBox="0 0 100 150" style="height:120px"><circle cx="50" cy="22" r="15" fill="#B9C8BF"/><path d="M50 40 C16 40 20 70 20 95 L28 148 L72 148 L80 95 C80 70 84 40 50 40 Z" fill="#B9C8BF"/></svg>
+      <div style="font-size:16px;font-weight:800;margin-top:6px">212 lb</div>
+      <div class="sub2">Before · Mar 2</div>
+    </div>
+    <div style="display:flex;align-items:center;font-size:22px;color:#0D9E52;font-weight:800">→</div>
+    <div style="flex:1;background:linear-gradient(180deg,#EAF9F0,#DCF3E5);border-radius:18px;padding:12px 8px;text-align:center;border:2px solid #19CC6B">
+      <svg viewBox="0 0 100 150" style="height:120px"><circle cx="50" cy="22" r="15" fill="#B9C8BF"/><path d="M50 40 C28 40 32 70 32 95 L37 148 L63 148 L68 95 C68 70 72 40 50 40 Z" fill="#B9C8BF"/></svg>
+      <div style="font-size:16px;font-weight:800;margin-top:6px;color:#0D9E52">196.6 lb</div>
+      <div class="sub2">Today · Jul 5</div>
+    </div>
   </div>
 </div>
 </div>
@@ -113,50 +123,69 @@ ${TABBAR('progress')}`},
 
 // ============ 7. PLAN REVEAL ============
 plan: { bodyClass:'', html: `
-<div class="page" style="padding-top:40px">
-<div style="text-align:center;padding:0 10px">
-  <img src="file://${S}/assets/coach.png" style="width:110px;margin-bottom:14px">
-  <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15">Your daily<br>recommendation</div>
-  <div class="sub2" style="font-size:14.5px;margin-top:8px">You can edit this anytime</div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,#DFF4E7, #F5F5F7 340px)"></div>
+${[[40,90,'#19CC6B'],[500,60,'#F7A32E'],[80,240,'#4D8FF2'],[470,210,'#F2596B'],[260,40,'#F7A32E'],[180,120,'#19CC6B'],[420,140,'#19CC6B'],[330,80,'#F2596B']].map(c=>
+  `<div style="position:absolute;left:${c[0]}px;top:${c[1]}px;width:10px;height:10px;border-radius:3px;background:${c[2]};opacity:.55;transform:rotate(${(c[0]*7)%80}deg)"></div>`).join('')}
+<div class="page" style="position:relative;padding-top:26px">
+<div style="text-align:center">
+  <img src="file://${S}/assets/coach.png" style="width:92px;margin-bottom:8px">
+  <div style="display:inline-block;background:rgba(25,204,107,.15);color:#0D9E52;font-size:12px;font-weight:800;letter-spacing:.08em;padding:6px 14px;border-radius:999px;margin-bottom:8px">YOUR PLAN IS READY 🎉</div>
+  <div style="font-size:27px;font-weight:800;letter-spacing:-.02em;line-height:1.12">Your daily<br>recommendation</div>
 </div>
-<div class="card" style="margin-top:22px;display:flex;align-items:center;gap:18px">
-  <svg width="104" height="104" viewBox="0 0 104 104" style="flex:none;transform:rotate(-90deg)">
-    <circle cx="52" cy="52" r="44" fill="none" stroke="#EEF1F0" stroke-width="11"/>
-    <circle cx="52" cy="52" r="44" fill="none" stroke="#19CC6B" stroke-width="11" stroke-linecap="round" stroke-dasharray="276" stroke-dashoffset="69"/>
-  </svg>
-  <div>
-    <div class="sub2" style="font-weight:600">Calories</div>
-    <div class="big" style="font-size:44px">3,405</div>
-    <div class="sub2">per day to build muscle</div>
+
+<div class="card" style="margin-top:16px;padding:18px">
+  <div style="display:flex;align-items:center;gap:16px">
+    <div style="position:relative;width:118px;height:118px;flex:none">
+      <div style="width:118px;height:118px;border-radius:50%;background:conic-gradient(#19CC6B 0 270deg,#E2EFE7 270deg 360deg)"></div>
+      <div style="position:absolute;inset:11px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <div style="font-size:25px;font-weight:800;letter-spacing:-.02em">3,405</div>
+        <div style="font-size:10.5px;color:#858C8A;font-weight:700">KCAL / DAY</div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <div style="font-size:15px;font-weight:800">Calories to build muscle</div>
+      <div class="sub2" style="margin-top:3px">Based on your goal, body and activity. Edit anytime.</div>
+      <div style="display:flex;gap:6px;margin-top:9px">
+        <div style="background:#F3F5F4;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:700">28 yrs</div>
+        <div style="background:#F3F5F4;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:700">6'1"</div>
+        <div style="background:#F3F5F4;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:700">Very active</div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:9px;margin-top:16px">
+    ${[['Protein','136g','#F2596B','76'],['Carbs','272g','#F7A32E','93'],['Fat','71g','#4D8FF2','85']].map(m=>`
+    <div style="flex:1;background:#F8FAF9;border:1px solid #EDF0EE;border-radius:16px;padding:11px 6px;text-align:center">
+      <div style="position:relative;width:56px;height:56px;margin:0 auto">
+        <div style="width:56px;height:56px;border-radius:50%;background:conic-gradient(${m[2]} 0 ${Math.round(m[3]*3.6)}deg,#E9EDEB ${Math.round(m[3]*3.6)}deg 360deg)"></div>
+        <div style="position:absolute;inset:6px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:800">${m[1]}</div>
+      </div>
+      <div style="font-size:11.5px;font-weight:800;color:${m[2]};margin-top:5px">${m[0]}</div>
+    </div>`).join('')}
   </div>
 </div>
-<div style="display:flex;gap:10px;margin-bottom:12px">
-  <div class="card" style="flex:1;margin:0;text-align:center;padding:14px 8px">
-    <div class="sub2" style="color:#F2596B;font-weight:800">Protein</div>
-    <div style="font-size:26px;font-weight:800;margin-top:2px">136<span style="font-size:15px;font-weight:700">g</span></div>
-  </div>
-  <div class="card" style="flex:1;margin:0;text-align:center;padding:14px 8px">
-    <div class="sub2" style="color:#F7A32E;font-weight:800">Carbs</div>
-    <div style="font-size:26px;font-weight:800;margin-top:2px">272<span style="font-size:15px;font-weight:700">g</span></div>
-  </div>
-  <div class="card" style="flex:1;margin:0;text-align:center;padding:14px 8px">
-    <div class="sub2" style="color:#4D8FF2;font-weight:800">Fat</div>
-    <div style="font-size:26px;font-weight:800;margin-top:2px">71<span style="font-size:15px;font-weight:700">g</span></div>
-  </div>
-</div>
-<div class="card" style="background:#F2FBF6;border-color:#D6F2E2;text-align:center;padding:20px">
-  <div style="font-size:19px;font-weight:800">You should reach <span style="color:#0D9E52">185 lb</span></div>
-  <div class="sub2" style="font-size:14px;margin-top:4px">by October 12 at a healthy pace</div>
-</div>
+
 <div class="card">
-  <div class="h" style="margin-bottom:10px">How we get you there</div>
-  <div style="font-size:14px;font-weight:600;line-height:2.1">
-    📸&nbsp; Snap your meals, AI does the math<br>
-    🎯&nbsp; Hit your protein target daily<br>
-    📈&nbsp; Weigh in weekly to tune the plan
-  </div>
+  <div class="row"><div class="h" style="font-size:15px">Your journey to 185 lb</div>
+  <div style="background:rgba(25,204,107,.12);color:#0D9E52;font-size:11.5px;font-weight:800;padding:5px 10px;border-radius:999px">14 weeks</div></div>
+  <svg viewBox="0 0 480 150" style="width:100%;margin-top:8px">
+    <path d="M20,30 C140,34 260,70 460,118" fill="none" stroke="#19CC6B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M20,30 C140,34 260,70 460,118 L460,150 L20,150 Z" fill="rgba(25,204,107,.10)"/>
+    <circle cx="20" cy="30" r="9" fill="#fff" stroke="#B9C8BF" stroke-width="4"/>
+    <circle cx="460" cy="118" r="10" fill="#fff" stroke="#0D9E52" stroke-width="5"/>
+    <text x="20" y="66" font-size="15" font-weight="800" fill="#121714" font-family="Inter">212 lb</text>
+    <text x="20" y="84" font-size="11" fill="#858C8A" font-family="Inter">Today</text>
+    <text x="460" y="88" font-size="15" font-weight="800" fill="#0D9E52" text-anchor="end" font-family="Inter">185 lb</text>
+    <text x="460" y="106" font-size="11" fill="#858C8A" text-anchor="end" font-family="Inter">Oct 12</text>
+  </svg>
 </div>
-<div class="greenbtn" style="margin-top:6px">Let's get started</div>
+
+<div class="card" style="background:#F2FBF6;border-color:#D6F2E2;display:flex;gap:12px;align-items:center;padding:14px 16px">
+  <div style="font-size:24px">🎯</div>
+  <div style="font-size:14.5px;font-weight:700;line-height:1.4">You should reach <span style="color:#0D9E52">185 lb by October 12</span> at a healthy, sustainable pace</div>
+</div>
+
+<div class="greenbtn" style="box-shadow:0 12px 28px rgba(25,204,107,.4)">Let's get started</div>
+<div class="sub2" style="text-align:center;margin-top:8px">You can adjust everything later in Settings</div>
 </div>`},
 
 // ============ 8. BARCODE ============
@@ -267,33 +296,25 @@ ${TABBAR('home')}`},
 milestones: { bodyClass:'mint', html: `
 <div class="page">
 ${APPHEAD}
-<div class="screentitle">Milestones</div>
-<div class="grid2">
-  <div class="card" style="text-align:center;padding:13px">
-    <div class="row" style="justify-content:center;gap:8px">
-      <img src="file://${S}/assets/streak_flame.png" style="width:26px">
-      <div class="big" style="font-size:26px">4 <span style="font-size:13px;color:#858C8A;font-weight:600">day streak</span></div>
-    </div>
-  </div>
-  <div class="card" style="text-align:center;padding:13px">
-    <div class="big" style="font-size:26px">6<span style="font-size:15px;color:#858C8A">/24</span> <span style="font-size:13px;color:#858C8A;font-weight:600">badges</span></div>
-  </div>
+<div class="row" style="padding:6px 2px 12px">
+  <div class="screentitle" style="padding:0">Milestones</div>
+  <div style="background:#fff;border:1px solid #E9ECEE;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:800">6<span style="color:#858C8A">/24</span> earned</div>
 </div>
 ${(() => {
   const cell = (img, title, detail, locked) => `
-    <div style="background:#fff;border:1px solid #E9ECEE;border-radius:20px;padding:14px 8px;text-align:center;${locked?'opacity:.55':''}">
-      <img src="file://${S}/assets/${img}.png" style="width:84px;height:84px;${locked?'filter:grayscale(1)':''}">
-      <div style="font-size:13px;font-weight:800;margin-top:8px">${title}</div>
-      <div style="font-size:11px;color:#858C8A;font-weight:600;margin-top:2px">${detail}</div>
+    <div style="background:#fff;border:1px solid #E9ECEE;border-radius:18px;padding:12px 6px 10px;text-align:center;${locked?'opacity:.5':''}">
+      <img src="file://${S}/assets/${img}.png" style="width:78px;height:78px;${locked?'filter:grayscale(1)':''}">
+      <div style="font-size:12px;font-weight:800;margin-top:6px">${title}</div>
+      <div style="font-size:10.5px;color:#858C8A;font-weight:600;margin-top:1px">${detail}</div>
     </div>`;
   const rows = [
     [ ['badge_s3','Rookie','3-day streak',0], ['badge_m1','First Bite','Log 1 meal',0], ['badge_photo','Say Cheese','First photo scan',0] ],
     [ ['badge_m5','Forking Around','Log 5 meals',0], ['badge_m10','Snack Attack','Log 10 meals',0], ['badge_w1','Step on the Scale','Log weight once',0] ],
-    [ ['badge_locked','On a Roll','7-day streak',1], ['badge_locked','Quarter Century','Log 25 meals',1], ['badge_locked','Trend Setter','Log weight 5×',1] ],
+    [ ['badge_locked','On a Roll','7-day streak',1], ['badge_locked','Getting Serious','10-day streak',1], ['badge_locked','Quarter Century','Log 25 meals',1] ],
+    [ ['badge_locked','Trend Setter','Log weight 5x',1], ['badge_locked','First Drop','Log water once',1], ['badge_locked','Committed','21-day streak',1] ],
   ];
-  return rows.map(r=>`<div style="display:flex;gap:10px;margin-bottom:10px">${r.map(c=>`<div style="flex:1">${cell(...c)}</div>`).join('')}</div>`).join('');
+  return rows.map(r=>`<div style="display:flex;gap:9px;margin-bottom:9px">${r.map(c=>`<div style="flex:1">${cell(...c)}</div>`).join('')}</div>`).join('');
 })()}
-<div class="sub2" style="text-align:center;margin-top:4px">18 more to unlock. Keep logging!</div>
 </div>
 ${TABBAR('progress')}`},
 };

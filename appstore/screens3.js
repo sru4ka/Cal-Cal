@@ -27,7 +27,7 @@ const BODY = `
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px">
       <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(25,204,107,.14);color:#0D9E52;border-radius:999px;padding:9px 16px;font-size:14.5px;font-weight:800">📷 Snap your fridge</div>
-      <div style="font-size:13.5px;color:#6a7370;font-weight:600">26 items</div>
+      
     </div>
   </div>
 
@@ -44,12 +44,10 @@ const BODY = `
     <div style="background:#19CC6B;color:#fff;border-radius:16px;height:50px;display:flex;align-items:center;justify-content:center;font-size:15.5px;font-weight:800;margin-top:12px;box-shadow:0 10px 24px rgba(25,204,107,.35)">✨ Suggest dinner</div>
   </div>
 
-  <div style="background:#fff;border:1px solid #E9ECEE;border-radius:22px;padding:16px;margin-top:12px">
-    <div style="font-size:12px;color:#858C8A;font-weight:500">Tap an item to edit its nutrition · ✕ removes it</div>
-    ${cat('🍗','Protein',['Eggplant salad','Eggs','meat'])}
-    ${cat('🥦','Fruit & Veg',['beans','Korean salad','lemon','lettuce'])}
-    ${cat('🌾','Carbs & Grains',['pasta sauce','Potato','rice'])}
-    ${cat('🥛','Dairy',['Philadelphia cheese','Yogurt'])}
+  <div style="background:#fff;border:1px solid #E9ECEE;border-radius:22px;padding:26px 16px;margin-top:12px;text-align:center">
+    <img src="file://${S}/assets/empty_fridge.png" style="width:190px;margin:0 auto">
+    <div style="font-size:19px;font-weight:800;margin-top:10px">Your fridge is empty</div>
+    <div style="font-size:13px;color:#858C8A;font-weight:500;margin-top:5px;line-height:1.5">Type items above or snap a photo,<br>everything you add is saved here.</div>
   </div>
 </div>
 

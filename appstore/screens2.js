@@ -65,10 +65,10 @@ scan: `
 </div>
 
 <!-- mode toggles -->
-<div style="position:absolute;bottom:216px;left:0;right:0;display:flex;justify-content:center;gap:9px">
-  <div style="background:#fff;color:#121714;font-size:14px;font-weight:800;padding:11px 20px;border-radius:14px;display:flex;gap:7px;align-items:center">⌞⌝ Scan Food</div>
-  <div style="background:rgba(20,22,20,.45);color:#e8ece9;font-size:14px;font-weight:600;padding:11px 20px;border-radius:14px;backdrop-filter:blur(4px)">Barcode</div>
-  <div style="background:rgba(20,22,20,.45);color:#e8ece9;font-size:14px;font-weight:600;padding:11px 20px;border-radius:14px;backdrop-filter:blur(4px)">Food label</div>
+<div style="position:absolute;bottom:212px;left:0;right:0;display:flex;justify-content:center;gap:10px">
+  <div style="background:#fff;color:#121714;font-size:17px;font-weight:800;padding:15px 26px;border-radius:17px;display:flex;gap:8px;align-items:center">⌞⌝ Scan Food</div>
+  <div style="background:rgba(20,22,20,.5);color:#f2f5f3;font-size:17px;font-weight:700;padding:15px 26px;border-radius:17px;backdrop-filter:blur(4px)">Barcode</div>
+  <div style="background:rgba(20,22,20,.5);color:#f2f5f3;font-size:17px;font-weight:700;padding:15px 26px;border-radius:17px;backdrop-filter:blur(4px)">Food label</div>
 </div>
 
 <!-- shutter row -->
@@ -149,20 +149,12 @@ barcode2: `
   <div style="position:absolute;bottom:0;left:0;width:62px;height:62px;border-bottom:6px solid #fff;border-left:6px solid #fff;border-bottom-left-radius:28px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.18))"></div>
   <div style="position:absolute;bottom:0;right:0;width:62px;height:62px;border-bottom:6px solid #fff;border-right:6px solid #fff;border-bottom-right-radius:28px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.18))"></div>
 
-  <!-- protein bar -->
-  <div style="position:absolute;left:26px;right:26px;top:76px;height:320px;transform:rotate(-4deg)">
-    <div style="position:absolute;inset:0;border-radius:26px;background:
-      linear-gradient(160deg,#FFC93C 0%,#FFB020 45%,#F29A00 100%);
-      box-shadow:0 26px 60px rgba(150,100,0,.35), inset 0 3px 10px rgba(255,255,255,.55), inset 0 -6px 16px rgba(130,70,0,.25)"></div>
-    <div style="position:absolute;left:0;top:14px;bottom:14px;width:26px;background:
-      repeating-linear-gradient(180deg,#E89400 0 14px,#D07F00 14px 28px);border-radius:14px 0 0 14px;filter:brightness(.96)"></div>
-    <div style="position:absolute;right:0;top:14px;bottom:14px;width:26px;background:
-      repeating-linear-gradient(180deg,#E89400 0 14px,#D07F00 14px 28px);border-radius:0 14px 14px 0;filter:brightness(.96)"></div>
-    <div style="position:absolute;left:50%;top:24px;transform:translateX(-50%);font-size:15px;font-weight:900;letter-spacing:.14em;color:#7c4d00">PROTEIN BAR</div>
-    <div style="position:absolute;left:50%;top:48px;transform:translateX(-50%);font-size:11px;font-weight:800;letter-spacing:.2em;color:#9c6a10">VANILLA · 20G PROTEIN</div>
-    <div style="position:absolute;left:50%;top:84px;transform:translateX(-50%);width:290px;background:#fff;border-radius:14px;padding:16px 18px 10px;box-shadow:0 8px 22px rgba(120,70,0,.25)">
-      <svg viewBox="0 0 300 74" style="width:100%">
-        ${Array.from({length:46},(_,i)=>{const w=[2,4,2,6,3,2,5,2,3,4][i%10];const x=5+i*6.3;return `<rect x="${x}" y="0" width="${w*0.85}" height="56" fill="#17140e"/>`}).join('')}
+  <!-- real protein bar photo -->
+  <div style="position:absolute;left:10px;right:10px;top:60px;text-align:center;transform:rotate(-3deg)">
+    <img src="file://${S}/assets/bar_real.png" style="width:96%;filter:drop-shadow(0 26px 34px rgba(90,60,20,.35))">
+    <div style="display:inline-block;background:#fff;border-radius:14px;padding:14px 18px 8px;box-shadow:0 10px 26px rgba(90,60,20,.28);margin-top:-30px">
+      <svg viewBox="0 0 300 74" style="width:250px">
+        <rect x="5.0" y="0" width="1.7" height="56" fill="#17140e"/><rect x="11.3" y="0" width="3.4" height="56" fill="#17140e"/><rect x="17.6" y="0" width="1.7" height="56" fill="#17140e"/><rect x="23.9" y="0" width="5.1" height="56" fill="#17140e"/><rect x="30.2" y="0" width="2.55" height="56" fill="#17140e"/><rect x="36.5" y="0" width="1.7" height="56" fill="#17140e"/><rect x="42.8" y="0" width="4.25" height="56" fill="#17140e"/><rect x="49.1" y="0" width="1.7" height="56" fill="#17140e"/><rect x="55.4" y="0" width="2.55" height="56" fill="#17140e"/><rect x="61.699999999999996" y="0" width="3.4" height="56" fill="#17140e"/><rect x="68.0" y="0" width="1.7" height="56" fill="#17140e"/><rect x="74.3" y="0" width="3.4" height="56" fill="#17140e"/><rect x="80.6" y="0" width="1.7" height="56" fill="#17140e"/><rect x="86.89999999999999" y="0" width="5.1" height="56" fill="#17140e"/><rect x="93.2" y="0" width="2.55" height="56" fill="#17140e"/><rect x="99.5" y="0" width="1.7" height="56" fill="#17140e"/><rect x="105.8" y="0" width="4.25" height="56" fill="#17140e"/><rect x="112.1" y="0" width="1.7" height="56" fill="#17140e"/><rect x="118.39999999999999" y="0" width="2.55" height="56" fill="#17140e"/><rect x="124.7" y="0" width="3.4" height="56" fill="#17140e"/><rect x="131.0" y="0" width="1.7" height="56" fill="#17140e"/><rect x="137.29999999999998" y="0" width="3.4" height="56" fill="#17140e"/><rect x="143.6" y="0" width="1.7" height="56" fill="#17140e"/><rect x="149.9" y="0" width="5.1" height="56" fill="#17140e"/><rect x="156.2" y="0" width="2.55" height="56" fill="#17140e"/><rect x="162.5" y="0" width="1.7" height="56" fill="#17140e"/><rect x="168.79999999999998" y="0" width="4.25" height="56" fill="#17140e"/><rect x="175.1" y="0" width="1.7" height="56" fill="#17140e"/><rect x="181.4" y="0" width="2.55" height="56" fill="#17140e"/><rect x="187.7" y="0" width="3.4" height="56" fill="#17140e"/><rect x="194.0" y="0" width="1.7" height="56" fill="#17140e"/><rect x="200.29999999999998" y="0" width="3.4" height="56" fill="#17140e"/><rect x="206.6" y="0" width="1.7" height="56" fill="#17140e"/><rect x="212.9" y="0" width="5.1" height="56" fill="#17140e"/><rect x="219.2" y="0" width="2.55" height="56" fill="#17140e"/><rect x="225.5" y="0" width="1.7" height="56" fill="#17140e"/><rect x="231.79999999999998" y="0" width="4.25" height="56" fill="#17140e"/><rect x="238.1" y="0" width="1.7" height="56" fill="#17140e"/><rect x="244.4" y="0" width="2.55" height="56" fill="#17140e"/><rect x="250.7" y="0" width="3.4" height="56" fill="#17140e"/><rect x="257.0" y="0" width="1.7" height="56" fill="#17140e"/><rect x="263.3" y="0" width="3.4" height="56" fill="#17140e"/><rect x="269.59999999999997" y="0" width="1.7" height="56" fill="#17140e"/><rect x="275.9" y="0" width="5.1" height="56" fill="#17140e"/><rect x="282.2" y="0" width="2.55" height="56" fill="#17140e"/><rect x="288.5" y="0" width="1.7" height="56" fill="#17140e"/>
         <text x="150" y="72" font-size="14" fill="#17140e" text-anchor="middle" font-family="Inter" font-weight="700">0 41220 88472 5</text>
       </svg>
     </div>
@@ -178,7 +170,7 @@ barcode2: `
 <div style="position:absolute;left:20px;right:20px;top:640px;background:#fff;border-radius:26px;padding:20px;box-shadow:0 30px 70px rgba(60,55,40,.28)">
   <div class="row">
     <div>
-      <div style="font-size:19px;font-weight:800">Vanilla Protein Bar</div>
+      <div style="font-size:19px;font-weight:800">Chocolate Chip Protein Bar</div>
       <div style="font-size:12.5px;color:#858C8A;font-weight:600;margin-top:2px">1 bar (52 g) · verified nutrition</div>
     </div>
     <div style="text-align:right">

@@ -12,6 +12,19 @@ const PANELS = [
     n: 1, frame: 'f_8.4.png', pad: '#CEE9DC',
     headline: 'Track calories<br>with a photo',
     pill: 'AI CALORIE TRACKER & MACRO COUNTER',
+    overlay: `<div class="pop" style="top:880px;width:1000px;transform:translateX(-50%) rotate(-2deg)"><div class="cap">MACROS TODAY</div><div class="ringrow"><div class="ringcell">
+        <div class="cring"><div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(#F2596B 0 276deg,#F8DEE1 276deg 360deg)"></div>
+        <div class="in"><span style="font-size:44px">104g</span><span style="font-size:26px;color:#858C8A;font-weight:700">/136</span></div></div>
+        <div class="lbl" style="color:#F2596B">Protein</div>
+      </div><div class="ringcell">
+        <div class="cring"><div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(#F7A32E 0 336deg,#FBEBD2 336deg 360deg)"></div>
+        <div class="in"><span style="font-size:44px">254g</span><span style="font-size:26px;color:#858C8A;font-weight:700">/272</span></div></div>
+        <div class="lbl" style="color:#F7A32E">Carbs</div>
+      </div><div class="ringcell">
+        <div class="cring"><div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(#4D8FF2 0 305deg,#DCE8FB 305deg 360deg)"></div>
+        <div class="in"><span style="font-size:44px">60g</span><span style="font-size:26px;color:#858C8A;font-weight:700">/71</span></div></div>
+        <div class="lbl" style="color:#4D8FF2">Fat</div>
+      </div></div></div>`,
   },
   {
     n: 2, frame: 'gen_scan.png', noPad: true,
@@ -22,6 +35,7 @@ const PANELS = [
     n: 3, frame: 'gen_result.png', noPad: true,
     headline: 'Calories & macros<br>in seconds',
     sub: 'Protein, carbs & fat. Fix anything with a tap',
+    overlay: `<div class="pop" style="top:1030px;width:1010px;transform:translateX(-50%) rotate(2deg);padding:38px 42px"><div class="cap">FULL MACRO BREAKDOWN</div><div style="display:flex;gap:20px"><div style="flex:1;text-align:center;background:#FDF1F2;color:#F2596B;border-radius:26px;padding:34px 0;font-size:38px;font-weight:800">🍗 38g<br><span style="font-size:24px;letter-spacing:.06em">PROTEIN</span></div><div style="flex:1;text-align:center;background:#FEF6EA;color:#D98A18;border-radius:26px;padding:34px 0;font-size:38px;font-weight:800">🌾 32g<br><span style="font-size:24px;letter-spacing:.06em">CARBS</span></div><div style="flex:1;text-align:center;background:#EEF4FE;color:#4D8FF2;border-radius:26px;padding:34px 0;font-size:38px;font-weight:800">💧 26g<br><span style="font-size:24px;letter-spacing:.06em">FAT</span></div></div></div>`,
   },
   {
     n: 4, frame: 'gen_fridge.png', pad: '#CEE9DC',
@@ -53,6 +67,7 @@ const PANELS = [
     n: 9, frame: 'gen_health.png', pad: '#CEE9DC',
     headline: 'More than<br>calories',
     sub: 'Water, steps, workouts & a daily health score',
+    overlay: `<div class="pop" style="top:1060px;width:1010px;transform:translateX(-50%) rotate(-2deg);padding:40px 44px"><div class="cap" style="color:#3D9BD6">WATER · 1,500 / 2,000 ML</div><div style="display:flex;gap:16px"><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:3px solid #A8D8F2">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:3px solid #A8D8F2">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:3px solid #A8D8F2">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:3px solid #A8D8F2">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:3px solid #A8D8F2">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:3px solid #A8D8F2">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:#F5F7F8;border:3px dashed #D5DBDE;opacity:.55">💧</div><div style="flex:1;aspect-ratio:.84;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:52px;background:#F5F7F8;border:3px dashed #D5DBDE;opacity:.55">💧</div></div><div style="text-align:center;font-size:28px;font-weight:700;color:#858C8A;margin-top:24px">6 of 8 cups. Tap a cup to log</div></div>`,
   },
   {
     n: 10, frame: 'gen_milestones.png', pad: '#CEE9DC',
@@ -61,8 +76,8 @@ const PANELS = [
   },
   {
     n: 11, frame: 'f_0.5.png', pad: '#7E8E86',
-    headline: 'Six ways to log<br>any food',
-    sub: 'Photo scan · barcode · describe it · saved meals · manual · exercise',
+    headline: 'Add food<br>your way',
+    sub: 'Scan a meal, search food, saved & recent, or log exercise. Six ways to log in total',
   },
 ];
 
@@ -94,6 +109,14 @@ function html(p) {
   .coach-callout img.av{width:130px;height:130px;flex:none;}
   .coach-callout .t{font-size:44px;line-height:1.35;color:#121714;font-weight:600;}
   .coach-callout .t b{display:block;color:#0D9E52;font-size:38px;font-weight:800;letter-spacing:.04em;margin-bottom:10px;}
+  .pop{position:absolute;left:50%;background:#fff;border-radius:52px;box-shadow:0 50px 120px rgba(0,0,0,.30);
+       border:3px solid #E5E8EA;padding:44px 50px;}
+  .pop .cap{font-size:34px;font-weight:800;letter-spacing:.08em;color:#0D9E52;margin-bottom:26px;text-align:center;}
+  .ringrow{display:flex;gap:44px;justify-content:center;}
+  .ringcell{text-align:center;}
+  .ringcell .lbl{font-size:30px;font-weight:800;margin-top:14px;}
+  .cring{position:relative;width:190px;height:190px;margin:0 auto;}
+  .cring .in{position:absolute;inset:20px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;}
   </style></head><body style="--pad:${p.pad || '#F5F5F7'}">
   <div class="glow"></div>
   <div class="head">
@@ -112,6 +135,7 @@ function html(p) {
       <img class="av" src="file:///home/user/Cal-Cal/img/coach.png">
       <div class="t"><b>COACH</b>You’re 104g protein short. Add chicken, Greek yogurt, or a shake.</div>
     </div>` : ''}
+    ${p.overlay || ''}
   </div>
   </body></html>`;
 }
