@@ -14,12 +14,12 @@ const PANELS = [
     pill: 'AI CALORIE TRACKER & MACRO COUNTER',
   },
   {
-    n: 2, frame: 'f_3.0.png', pad: '#3a3a30',
+    n: 2, frame: 'gen_scan.png', noPad: true,
     headline: 'Just snap<br>your food',
     sub: 'The AI food scanner reads your plate — any dish, any cuisine',
   },
   {
-    n: 3, frame: 'f_6.4.png', pad: '#EDEDEE',
+    n: 3, frame: 'gen_result.png', noPad: true,
     headline: 'Calories & macros<br>in seconds',
     sub: 'Protein, carbs & fat — fix anything with a tap',
   },
@@ -45,7 +45,7 @@ const PANELS = [
     sub: 'Answer a few questions — get your daily calories, macros & goal date',
   },
   {
-    n: 8, frame: 'gen_barcode.png', pad: '#3B4139',
+    n: 8, frame: 'gen_barcode2.png', noPad: true,
     headline: 'Instant barcode<br>scanner',
     sub: 'Millions of packaged foods — exact nutrition in one scan',
   },
@@ -98,7 +98,7 @@ function html(p) {
   </div>
   <div class="scene">
     <div class="phone"><div class="screen">
-      <div class="pad"></div>
+      ${p.noPad ? '' : '<div class=\"pad\"></div>'}
       <img src="file://${S}/frames/${p.frame}">
       <div class="notch"></div>
     </div></div>
