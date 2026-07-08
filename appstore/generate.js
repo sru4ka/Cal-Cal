@@ -16,38 +16,38 @@ const PANELS = [
   {
     n: 2, frame: 'gen_scan.png', noPad: true,
     headline: 'Just snap<br>your food',
-    sub: 'The AI food scanner reads your plate — any dish, any cuisine',
+    sub: 'The AI food scanner reads your plate. Any dish, any cuisine',
   },
   {
     n: 3, frame: 'gen_result.png', noPad: true,
     headline: 'Calories & macros<br>in seconds',
-    sub: 'Protein, carbs & fat — fix anything with a tap',
+    sub: 'Protein, carbs & fat. Fix anything with a tap',
   },
   {
-    n: 4, frame: 'f_0.5.png', pad: '#7E8E86',
-    headline: 'Six ways to log<br>any food',
-    sub: 'Photo scan · barcode · describe it · saved meals · manual · exercise',
+    n: 4, frame: 'gen_fridge.png', pad: '#CEE9DC',
+    headline: 'Turn your fridge<br>into dinner',
+    sub: 'Snap your fridge. AI suggests meals that fit your remaining calories',
   },
   {
     n: 5, frame: 'f_8.4.png', pad: '#CEE9DC',
     headline: 'Your AI<br>nutrition coach',
-    sub: 'Knows what’s left in your day — and tells you what to eat next',
+    sub: 'It knows what’s left in your day and tells you what to eat next',
     coachZoom: true,
   },
   {
     n: 6, frame: 'gen_progress.png', pad: '#CEE9DC',
     headline: 'Watch the weight<br>come off',
-    sub: 'Weight trend, streaks & progress charts — synced with Apple Health',
+    sub: 'Weight trend, streaks and charts, synced with Apple Health',
   },
   {
     n: 7, frame: 'gen_plan.png', pad: '#F5F5F7',
     headline: 'A calorie plan<br>built for you',
-    sub: 'Answer a few questions — get your daily calories, macros & goal date',
+    sub: 'Answer a few questions to get your daily calories, macros & goal date',
   },
   {
     n: 8, frame: 'gen_barcode2.png', noPad: true,
     headline: 'Instant barcode<br>scanner',
-    sub: 'Millions of packaged foods — exact nutrition in one scan',
+    sub: 'Millions of packaged foods. Exact nutrition in one scan',
   },
   {
     n: 9, frame: 'gen_health.png', pad: '#CEE9DC',
@@ -58,6 +58,11 @@ const PANELS = [
     n: 10, frame: 'gen_milestones.png', pad: '#CEE9DC',
     headline: 'Stay consistent,<br>hit your goal',
     sub: 'Streaks, badges & milestones keep you motivated',
+  },
+  {
+    n: 11, frame: 'f_0.5.png', pad: '#7E8E86',
+    headline: 'Six ways to log<br>any food',
+    sub: 'Photo scan · barcode · describe it · saved meals · manual · exercise',
   },
 ];
 
@@ -75,19 +80,19 @@ function html(p) {
         font-size:44px;font-weight:800;letter-spacing:.06em;padding:26px 60px;border-radius:80px;
         box-shadow:0 20px 50px rgba(25,204,107,.35);}
   .sub{margin-top:44px;font-size:52px;font-weight:500;color:#6a7370;line-height:1.35;padding:0 60px;}
-  .scene{position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;}
-  .phone{width:1054px;background:#0d0f0e;border-radius:120px;padding:22px;
+  .scene{position:absolute;left:50%;transform:translateX(-50%);bottom:96px;}
+  .phone{width:920px;background:#0d0f0e;border-radius:120px;padding:22px;
          box-shadow:0 60px 140px rgba(10,40,25,.30);}
-  .screen{border-radius:100px;overflow:hidden;position:relative;background:#F5F5F7;}
+  .screen{border-radius:92px;overflow:hidden;position:relative;background:#F5F5F7;height:1925px;}
   .screen .pad{height:118px;background:var(--pad);}
-  .screen img{width:100%;display:block;}
+  .screen img{width:100%;display:block;} .screen.nopad img{width:100%;height:100%;object-fit:cover;}
   .notch{position:absolute;top:26px;left:50%;transform:translateX(-50%);width:290px;height:72px;
          background:#0d0f0e;border-radius:44px;}
-  .coach-callout{position:absolute;left:50%;transform:translateX(-50%) rotate(-2deg);top:1210px;width:1060px;background:#fff;border-radius:56px;
+  .coach-callout{position:absolute;left:50%;transform:translateX(-50%) rotate(-2deg);top:1120px;width:930px;background:#fff;border-radius:56px;
         box-shadow:0 50px 120px rgba(0,0,0,.28);padding:44px 52px;display:flex;gap:36px;align-items:flex-start;
         border:3px solid #E5E8EA;}
-  .coach-callout img.av{width:150px;height:150px;flex:none;}
-  .coach-callout .t{font-size:50px;line-height:1.35;color:#121714;font-weight:600;}
+  .coach-callout img.av{width:130px;height:130px;flex:none;}
+  .coach-callout .t{font-size:44px;line-height:1.35;color:#121714;font-weight:600;}
   .coach-callout .t b{display:block;color:#0D9E52;font-size:38px;font-weight:800;letter-spacing:.04em;margin-bottom:10px;}
   </style></head><body style="--pad:${p.pad || '#F5F5F7'}">
   <div class="glow"></div>
@@ -97,7 +102,7 @@ function html(p) {
     ${p.sub ? `<div class="sub">${p.sub}</div>` : ''}
   </div>
   <div class="scene">
-    <div class="phone"><div class="screen">
+    <div class="phone"><div class="screen ${p.noPad ? 'nopad' : ''}">
       ${p.noPad ? '' : '<div class=\"pad\"></div>'}
       <img src="file://${S}/frames/${p.frame}">
       <div class="notch"></div>

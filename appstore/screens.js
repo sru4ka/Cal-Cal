@@ -151,7 +151,7 @@ plan: { bodyClass:'', html: `
 <div class="card">
   <div class="h" style="margin-bottom:10px">How we get you there</div>
   <div style="font-size:14px;font-weight:600;line-height:2.1">
-    📸&nbsp; Snap your meals — AI does the math<br>
+    📸&nbsp; Snap your meals, AI does the math<br>
     🎯&nbsp; Hit your protein target daily<br>
     📈&nbsp; Weigh in weekly to tune the plan
   </div>
@@ -249,7 +249,7 @@ ${APPHEAD}
     <div style="flex:1;aspect-ratio:.82;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:21px;
       ${i<6?'background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:1.5px solid #A8D8F2':'background:#F5F7F8;border:1.5px dashed #D5DBDE;opacity:.6'}">💧</div>`).join('')}
   </div>
-  <div class="sub2" style="margin-top:10px">6 of 8 cups — tap a cup to log</div>
+  <div class="sub2" style="margin-top:10px">6 of 8 cups. Tap a cup to log</div>
 </div>
 <div class="card">
   <div class="row">
@@ -293,7 +293,7 @@ ${(() => {
   ];
   return rows.map(r=>`<div style="display:flex;gap:10px;margin-bottom:10px">${r.map(c=>`<div style="flex:1">${cell(...c)}</div>`).join('')}</div>`).join('');
 })()}
-<div class="sub2" style="text-align:center;margin-top:4px">18 more to unlock — keep logging!</div>
+<div class="sub2" style="text-align:center;margin-top:4px">18 more to unlock. Keep logging!</div>
 </div>
 ${TABBAR('progress')}`},
 };
