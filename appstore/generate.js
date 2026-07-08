@@ -34,6 +34,31 @@ const PANELS = [
     sub: 'Knows what’s left in your day — and tells you what to eat next',
     coachZoom: true,
   },
+  {
+    n: 6, frame: 'gen_progress.png', pad: '#CEE9DC',
+    headline: 'Watch the weight<br>come off',
+    sub: 'Weight trend, streaks & progress charts — synced with Apple Health',
+  },
+  {
+    n: 7, frame: 'gen_plan.png', pad: '#F5F5F7',
+    headline: 'A calorie plan<br>built for you',
+    sub: 'Answer a few questions — get your daily calories, macros & goal date',
+  },
+  {
+    n: 8, frame: 'gen_barcode.png', pad: '#3B4139',
+    headline: 'Instant barcode<br>scanner',
+    sub: 'Millions of packaged foods — exact nutrition in one scan',
+  },
+  {
+    n: 9, frame: 'gen_health.png', pad: '#CEE9DC',
+    headline: 'More than<br>calories',
+    sub: 'Water, steps, workouts & a daily health score',
+  },
+  {
+    n: 10, frame: 'gen_milestones.png', pad: '#CEE9DC',
+    headline: 'Stay consistent,<br>hit your goal',
+    sub: 'Streaks, badges & milestones keep you motivated',
+  },
 ];
 
 function html(p) {
