@@ -106,13 +106,21 @@ ${APPHEAD}
   <div style="background:rgba(25,204,107,.12);color:#0D9E52;font-weight:800;font-size:12.5px;padding:6px 11px;border-radius:999px">▼ 15.4 lb so far</div></div>
   <div style="display:flex;gap:10px;margin-top:12px">
     <div style="flex:1;background:linear-gradient(180deg,#F3F6F4,#E9EFEA);border-radius:18px;padding:12px 8px;text-align:center">
-      <svg viewBox="0 0 100 150" style="height:120px"><circle cx="50" cy="22" r="15" fill="#B9C8BF"/><path d="M50 40 C16 40 20 70 20 95 L28 148 L72 148 L80 95 C80 70 84 40 50 40 Z" fill="#B9C8BF"/></svg>
+      <svg viewBox="0 0 100 150" style="height:120px">
+      <circle cx="50" cy="18" r="13" fill="#E8B98F"/>
+      <path d="M50 33 C20 33 14 62 15 88 C16 102 22 108 30 108 L34 148 L47 148 L47 112 L53 112 L53 148 L66 148 L70 108 C78 108 84 102 85 88 C86 62 80 33 50 33 Z" fill="#7A8B95"/>
+      <path d="M50 33 C20 33 14 62 15 88 L85 88 C86 62 80 33 50 33 Z" fill="#8FA3AE"/>
+    </svg>
       <div style="font-size:16px;font-weight:800;margin-top:6px">212 lb</div>
       <div class="sub2">Before · Mar 2</div>
     </div>
     <div style="display:flex;align-items:center;font-size:22px;color:#0D9E52;font-weight:800">→</div>
     <div style="flex:1;background:linear-gradient(180deg,#EAF9F0,#DCF3E5);border-radius:18px;padding:12px 8px;text-align:center;border:2px solid #19CC6B">
-      <svg viewBox="0 0 100 150" style="height:120px"><circle cx="50" cy="22" r="15" fill="#B9C8BF"/><path d="M50 40 C28 40 32 70 32 95 L37 148 L63 148 L68 95 C68 70 72 40 50 40 Z" fill="#B9C8BF"/></svg>
+      <svg viewBox="0 0 100 150" style="height:120px">
+      <circle cx="50" cy="18" r="13" fill="#E8B98F"/>
+      <path d="M50 33 C33 33 30 58 31 82 C31.5 94 36 100 41 100 L42 148 L48 148 L48 106 L52 106 L52 148 L58 148 L59 100 C64 100 68.5 94 69 82 C70 58 67 33 50 33 Z" fill="#19CC6B"/>
+      <path d="M50 33 C33 33 30 58 31 82 L69 82 C70 58 67 33 50 33 Z" fill="#31D67F"/>
+    </svg>
       <div style="font-size:16px;font-weight:800;margin-top:6px;color:#0D9E52">196.6 lb</div>
       <div class="sub2">Today · Jul 5</div>
     </div>
@@ -167,16 +175,17 @@ ${[[40,90,'#19CC6B'],[500,60,'#F7A32E'],[80,240,'#4D8FF2'],[470,210,'#F2596B'],[
 <div class="card">
   <div class="row"><div class="h" style="font-size:15px">Your journey to 185 lb</div>
   <div style="background:rgba(25,204,107,.12);color:#0D9E52;font-size:11.5px;font-weight:800;padding:5px 10px;border-radius:999px">14 weeks</div></div>
-  <svg viewBox="0 0 480 150" style="width:100%;margin-top:8px">
-    <path d="M20,30 C140,34 260,70 460,118" fill="none" stroke="#19CC6B" stroke-width="5" stroke-linecap="round"/>
-    <path d="M20,30 C140,34 260,70 460,118 L460,150 L20,150 Z" fill="rgba(25,204,107,.10)"/>
-    <circle cx="20" cy="30" r="9" fill="#fff" stroke="#B9C8BF" stroke-width="4"/>
-    <circle cx="460" cy="118" r="10" fill="#fff" stroke="#0D9E52" stroke-width="5"/>
-    <text x="20" y="66" font-size="15" font-weight="800" fill="#121714" font-family="Inter">212 lb</text>
-    <text x="20" y="84" font-size="11" fill="#858C8A" font-family="Inter">Today</text>
-    <text x="460" y="88" font-size="15" font-weight="800" fill="#0D9E52" text-anchor="end" font-family="Inter">185 lb</text>
-    <text x="460" y="106" font-size="11" fill="#858C8A" text-anchor="end" font-family="Inter">Oct 12</text>
-  </svg>
+  <div style="position:relative;margin-top:18px;padding:0 6px">
+    <div style="position:absolute;left:26px;right:26px;top:17px;height:8px;border-radius:99px;background:linear-gradient(90deg,#19CC6B,#7FE0AC 60%,#E9EDEB 60%)"></div>
+    <div style="display:flex;justify-content:space-between;position:relative">
+      ${[['212 lb','Today','#0D9E52','#19CC6B','✓'],['205','Aug 2','#0D9E52','#19CC6B','✓'],['195','Sep 6','#858C8A','#fff',''],['185 lb','Oct 12','#D98A18','#fff','🏁']].map(st=>`
+      <div style="text-align:center;width:74px">
+        <div style="width:42px;height:42px;border-radius:50%;margin:0 auto;background:${st[3]};border:4px solid ${st[3]==='#fff'?'#D9DFDC':'#0D9E52'};display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;font-weight:800;box-shadow:0 4px 10px rgba(0,0,0,.08)">${st[4]}</div>
+        <div style="font-size:14.5px;font-weight:800;margin-top:7px;color:${st[2]}">${st[0]}</div>
+        <div style="font-size:10.5px;color:#858C8A;font-weight:600">${st[1]}</div>
+      </div>`).join('')}
+    </div>
+  </div>
 </div>
 
 <div class="card" style="background:#F2FBF6;border-color:#D6F2E2;display:flex;gap:12px;align-items:center;padding:14px 16px">
@@ -272,13 +281,13 @@ ${APPHEAD}
   </div>
 </div>
 <div class="card">
-  <div class="row"><div class="h">Water</div><div class="sub2" style="font-weight:700">1,500 / 2,000 ml</div></div>
-  <div style="display:flex;gap:9px;margin-top:14px">
-    ${Array.from({length:8},(_,i)=>`
-    <div style="flex:1;aspect-ratio:.82;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:21px;
-      ${i<6?'background:linear-gradient(180deg,#DFF1FB,#BFE3F7);border:1.5px solid #A8D8F2':'background:#F5F7F8;border:1.5px dashed #D5DBDE;opacity:.6'}">💧</div>`).join('')}
+  <div class="row">
+    <div style="display:flex;gap:10px;align-items:center">
+      <div style="width:38px;height:38px;border-radius:12px;background:#FEF6EA;display:flex;align-items:center;justify-content:center;font-size:19px">🔄</div>
+      <div><div class="h" style="font-size:15px">Rollover calories</div><div class="sub2">Unused calories carry into tomorrow</div></div>
+    </div>
+    <div style="font-size:15px;font-weight:800;color:#D98A18">+120</div>
   </div>
-  <div class="sub2" style="margin-top:10px">6 of 8 cups. Tap a cup to log</div>
 </div>
 <div class="card">
   <div class="row">
@@ -302,8 +311,8 @@ ${APPHEAD}
 </div>
 ${(() => {
   const cell = (img, title, detail, locked) => `
-    <div style="background:#fff;border:1px solid #E9ECEE;border-radius:18px;padding:12px 6px 10px;text-align:center;${locked?'opacity:.5':''}">
-      <img src="file://${S}/assets/${img}.png" style="width:78px;height:78px;${locked?'filter:grayscale(1)':''}">
+    <div style="background:#fff;border:1px solid #E9ECEE;border-radius:16px;padding:9px 5px 8px;text-align:center;${locked?'opacity:.5':''}">
+      <img src="file://${S}/assets/${img}.png" style="width:68px;height:68px;${locked?'filter:grayscale(1)':''}">
       <div style="font-size:12px;font-weight:800;margin-top:6px">${title}</div>
       <div style="font-size:10.5px;color:#858C8A;font-weight:600;margin-top:1px">${detail}</div>
     </div>`;
@@ -312,6 +321,7 @@ ${(() => {
     [ ['badge_m5','Forking Around','Log 5 meals',0], ['badge_m10','Snack Attack','Log 10 meals',0], ['badge_w1','Step on the Scale','Log weight once',0] ],
     [ ['badge_locked','On a Roll','7-day streak',1], ['badge_locked','Getting Serious','10-day streak',1], ['badge_locked','Quarter Century','Log 25 meals',1] ],
     [ ['badge_locked','Trend Setter','Log weight 5x',1], ['badge_locked','First Drop','Log water once',1], ['badge_locked','Committed','21-day streak',1] ],
+    [ ['badge_locked','Locked In','30-day streak',1], ['badge_locked','Centurion','Log 100 meals',1], ['badge_locked','Weigh to Go','Log weight 25x',1] ],
   ];
   return rows.map(r=>`<div style="display:flex;gap:9px;margin-bottom:9px">${r.map(c=>`<div style="flex:1">${cell(...c)}</div>`).join('')}</div>`).join('');
 })()}

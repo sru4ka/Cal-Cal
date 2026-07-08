@@ -12,19 +12,28 @@ const PANELS = [
     n: 1, frame: 'f_8.4.png', pad: '#CEE9DC',
     headline: 'Track calories<br>with a photo',
     pill: 'AI CALORIE TRACKER & MACRO COUNTER',
-    overlay: `<div class="pop" style="top:880px;width:1000px;transform:translateX(-50%) rotate(-2deg)"><div class="cap">MACROS TODAY</div><div class="ringrow"><div class="ringcell">
-        <div class="cring"><div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(#F2596B 0 276deg,#F8DEE1 276deg 360deg)"></div>
-        <div class="in"><span style="font-size:44px">104g</span><span style="font-size:26px;color:#858C8A;font-weight:700">/136</span></div></div>
-        <div class="lbl" style="color:#F2596B">Protein</div>
-      </div><div class="ringcell">
-        <div class="cring"><div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(#F7A32E 0 336deg,#FBEBD2 336deg 360deg)"></div>
-        <div class="in"><span style="font-size:44px">254g</span><span style="font-size:26px;color:#858C8A;font-weight:700">/272</span></div></div>
-        <div class="lbl" style="color:#F7A32E">Carbs</div>
-      </div><div class="ringcell">
-        <div class="cring"><div style="width:190px;height:190px;border-radius:50%;background:conic-gradient(#4D8FF2 0 305deg,#DCE8FB 305deg 360deg)"></div>
-        <div class="in"><span style="font-size:44px">60g</span><span style="font-size:26px;color:#858C8A;font-weight:700">/71</span></div></div>
-        <div class="lbl" style="color:#4D8FF2">Fat</div>
-      </div></div></div>`,
+    overlay: `<div class="pop" style="top:640px;width:1010px;transform:translateX(-50%) rotate(-2deg);padding:48px 54px">
+      <div class="cap">TODAY AT A GLANCE</div>
+      <div style="display:flex;align-items:center;gap:44px;margin-bottom:40px">
+        <div style="position:relative;width:230px;height:230px;flex:none">
+          <div style="width:230px;height:230px;border-radius:50%;background:conic-gradient(#19CC6B 0 330deg,#DFEFE6 330deg 360deg)"></div>
+          <div style="position:absolute;inset:24px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <span style="font-size:58px;font-weight:800;letter-spacing:-.02em">3,121</span>
+            <span style="font-size:24px;color:#858C8A;font-weight:700">KCAL LEFT</span>
+          </div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;justify-content:space-between;font-size:32px;font-weight:600;color:#858C8A;border-bottom:2px dashed #E5E8EA;padding-bottom:14px">Goal <b style="color:#121714">3,405</b></div>
+          <div style="display:flex;justify-content:space-between;font-size:32px;font-weight:600;color:#858C8A;border-bottom:2px dashed #E5E8EA;padding-bottom:14px">Eaten <b style="color:#121714">285</b></div>
+          <div style="display:flex;justify-content:space-between;font-size:32px;font-weight:600;color:#858C8A">Streak <b style="color:#0D9E52">4 days 🔥</b></div>
+        </div>
+      </div>
+      <div class="ringrow" style="gap:56px">
+        <div class="ringcell"><div class="cring" style="width:160px;height:160px"><div style="width:160px;height:160px;border-radius:50%;background:conic-gradient(#F2596B 0 276deg,#F8DEE1 276deg 360deg)"></div><div class="in" style="inset:17px"><span style="font-size:36px">104g</span><span style="font-size:22px;color:#858C8A;font-weight:700">/136</span></div></div><div class="lbl" style="color:#F2596B;font-size:26px">Protein</div></div>
+        <div class="ringcell"><div class="cring" style="width:160px;height:160px"><div style="width:160px;height:160px;border-radius:50%;background:conic-gradient(#F7A32E 0 336deg,#FBEBD2 336deg 360deg)"></div><div class="in" style="inset:17px"><span style="font-size:36px">254g</span><span style="font-size:22px;color:#858C8A;font-weight:700">/272</span></div></div><div class="lbl" style="color:#F7A32E;font-size:26px">Carbs</div></div>
+        <div class="ringcell"><div class="cring" style="width:160px;height:160px"><div style="width:160px;height:160px;border-radius:50%;background:conic-gradient(#4D8FF2 0 305deg,#DCE8FB 305deg 360deg)"></div><div class="in" style="inset:17px"><span style="font-size:36px">60g</span><span style="font-size:22px;color:#858C8A;font-weight:700">/71</span></div></div><div class="lbl" style="color:#4D8FF2;font-size:26px">Fat</div></div>
+      </div>
+    </div>`,
   },
   {
     n: 2, frame: 'gen_scan.png', noPad: true,
