@@ -136,6 +136,17 @@
   .coach-li svg{flex:none;margin-top:3px}
   @media(max-width:900px){.coach-inner{grid-template-columns:1fr;padding:48px 30px}}
 
+  /* ---------- screenshots gallery ---------- */
+  .gallery{padding:96px 0 84px}
+  .gallery-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:46px 24px 18px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .gallery-row::-webkit-scrollbar{display:none}
+  .gallery-row .shot{flex:0 0 auto;width:272px;scroll-snap-align:center;border-radius:26px;
+    box-shadow:0 10px 22px rgba(0,0,0,.10), 0 30px 60px rgba(0,0,0,.10);transition:transform .25s ease}
+  .gallery-row .shot:hover{transform:translateY(-6px)}
+  .gallery-hint{text-align:center;font-size:13.5px;color:var(--ink-2);font-weight:600}
+  @media(max-width:600px){.gallery-row .shot{width:236px}}
+
   /* ---------- pricing ---------- */
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;align-items:stretch}
   .plan{background:var(--card);border:1px solid var(--hairline);border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative}
@@ -336,6 +347,28 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ================= SCREENSHOTS ================= -->
+<section class="gallery" id="screens">
+  <div class="wrap center">
+    <span class="kicker">Inside the app</span>
+    <h2>See it for yourself</h2>
+    <p class="sub">A quick tour of Cal Cal, straight from the App Store listing.</p>
+  </div>
+  <div class="gallery-row">
+    <img class="shot" src="img/shots/shot_1.webp" alt="Cal Cal home screen: track calories with a photo" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_2.webp" alt="AI food scanner reading a bowl and naming each ingredient" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_3.webp" alt="Calories and macros result in seconds" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_4.webp" alt="Fridge feature: AI suggests dinner from what you have" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_5.webp" alt="Instant barcode scanner" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_6.webp" alt="Your AI nutrition coach" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_7.webp" alt="Weight progress and transformation" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_8.webp" alt="Water, steps, workouts and health score" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_9.webp" alt="Streaks, badges and milestones" loading="lazy" width="272" height="591">
+    <img class="shot" src="img/shots/shot_10.webp" alt="Add food your way" loading="lazy" width="272" height="591">
+  </div>
+  <div class="gallery-hint">Swipe or scroll for more →</div>
 </section>
 
 <!-- ================= PRICING ================= -->
