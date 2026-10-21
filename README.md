@@ -51,7 +51,7 @@ python3 -m http.server 8000
 
 - Replace the two `href="#pricing"` App Store badge links in `index.html`
   with the real App Store URL once the app is live.
-- Contact address on the site is dbromberg1@gmail.com (in
+- Contact address on the site is support@calcalpro.com (in
   `support.html`, `privacy.html`, `terms.html`).
 - Have a lawyer look over `privacy.html` / `terms.html` — they're a solid
   starting point, not legal advice.
