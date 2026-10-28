@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cal Cal Pro gift</title>
+<meta name="description" content="A friend gave you Cal Cal Pro for free. Here is how to redeem your gift code.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="legal.css">
+<style>
+  .code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(15px,3.6vw,20px);font-weight:700;letter-spacing:.04em;background:var(--bg);border:1px dashed var(--hairline);border-radius:14px;padding:16px 18px;text-align:center;word-break:break-all;user-select:all;-webkit-user-select:all}
+  .cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:#fff !important;border-radius:999px;padding:14px 22px;font-weight:700;font-size:16px;margin-top:14px}
+  .cta:hover{text-decoration:none;opacity:.92}
+  .cta.secondary{background:var(--card);color:var(--ink) !important;border:1px solid var(--hairline)}
+  .steps{counter-reset:s;list-style:none;padding:0}
+  .steps li{counter-increment:s;position:relative;padding-left:40px;margin:14px 0}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .copied{color:var(--accent-dark);font-size:14px;margin-left:10px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">
+      <img src="img/logo.png" alt="" width="34" height="34">
+      Cal Cal
+    </a>
+    <a class="back" href="index.html">← Back to home</a>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <h1>🎁 A friend gave you Cal Cal Pro</h1>
+    <p class="updated">Free AI calorie counting, macros, streaks and more. No payment details needed.</p>
+
+    <div class="card" id="codeCard">
+      <h2 style="margin-top:0">Your gift code</h2>
+      <div class="code" id="code">Open the link your friend sent you to see your code.</div>
+      <div id="codeActions" class="hidden">
+        <a class="cta secondary" href="#" id="copy">Copy code</a><span class="copied hidden" id="copied">Copied</span>
+        <a class="cta" href="#" id="openApp">Open in Cal Cal</a>
+      </div>
+    </div>
+
+    <h2>How to redeem it</h2>
+    <div class="card">
+      <ol class="steps">
+        <li><strong>Install Cal Cal</strong> from the App Store on your iPhone.<br>
+          <a class="cta" href="https://apps.apple.com/us/app/cal-cal-ai-calorie-counter/id6787576503">Get Cal Cal on the App Store</a></li>
+        <li><strong>Sign in with the email your friend used.</strong> The code only works for that address, so if you create an account, create it with that email.</li>
+        <li><strong>Enter the code.</strong> Tap <em>Have a gift code?</em> on the welcome screen, or go to <strong>Profile → Redeem Gift Code</strong>. If the app is already installed, the <em>Open in Cal Cal</em> button above fills it in for you.</li>
+      </ol>
+      <p style="margin-top:12px">Having trouble? Email <a href="mailto:support@calcalpro.com">support@calcalpro.com</a> and include the code.</p>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Cal Cal · calcalpro.com</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  </div>
+</footer>
+<script>
+  (function () {
+    var raw = new URLSearchParams(location.search).get("code") || "";
+    var code = raw.toUpperCase().replace(/[^A-Z0-9-]/g, "");
+    if (!code) return;
+    document.getElementById("code").textContent = code;
+    document.getElementById("codeActions").classList.remove("hidden");
+    document.getElementById("openApp").href = "macrosnap://gift?code=" + encodeURIComponent(code);
+    document.getElementById("copy").addEventListener("click", function (e) {
+      e.preventDefault();
+      var done = function () { document.getElementById("copied").classList.remove("hidden"); };
+      if (navigator.clipboard) { navigator.clipboard.writeText(code).then(done, done); }
+      else {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById("code"));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
